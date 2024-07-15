@@ -1,0 +1,66 @@
+{
+  "Receta de Helado de cafe": {
+    "title-card": "Receta de Helado de cafe",
+    "descripcion": "Helado de cafe con dos ingredientes facil y sencillo de hacer.",
+    "periodo": "mañana",
+    "recomendacion": ["comerse el postre en dias de calor"],
+    "author": "@opinionvegana",
+    "fecha": "13 de julio de 2024",
+    "enlace": "/apartados/HeladoCafe.html"
+  },
+  "Corn Dogs Coreanos Caseros": {
+    "title-card": "Corn Dogs Coreanos Caseros",
+    "descripcion": "Los Corn Dogs Coreanos son una deliciosa variante del clásico perrito caliente americano. Esta versión combina una salchicha y queso envueltos en una masa esponjosa, cubiertos con cubos de papa y pan rallado, todo frito hasta alcanzar un dorado perfecto. Es una comida callejera popular en Corea que ahora puedes disfrutar en casa.",
+    "periodo": "tarde",
+    "recomendacion": [
+      "hacerlos antes de comer."],
+    "author": "@lasrecetasdesimon",
+    "fecha": "14 de julio de 2024",
+    "enlace": "/apartados/cornDog.html"
+  },
+  "Tres leches de Oreo": {
+    "title-card": "Tres leches de Oreo",
+    "descripcion": "Un delicioso pastel de tres leches con un toque especial de galletas Oreo, suavecito y jugoso, perfecto para cualquier ocasión.",
+    "periodo": "madrugada",
+    "recomendacion": [
+      "hacerlo para desayunar o antes de dormir "],
+    "author": "@sebastianleon",
+    "fecha": "14 de julio de 2024",
+    "enlace": "/apartados/pasteldeoreo.html"
+  },
+  "Pastel de chocolate super cremoso y facilísimo": {
+    "title-card": "Pastel de chocolate super cremoso y facilísimo",
+    "descripcion": "Este pastel de chocolate es perfecto para tus meriendas súper dulzonas. Tiene la textura de la típica tarta de 3 chocolates, pero solo con un chocolate. Puedes hacerlo en moldes individuales o estilo tarta grande.",
+    "periodo": "mañana",
+    "author": "@marianutricionfit",
+    "fecha": "14 de julio de 2024",
+    "enlace": "/apartados/pastelchocolate.html"
+  },
+    "Tarta de Chocolates sin Horno": {
+      "title-card": "Tarta de Chocolates sin Horno",
+      "descripcion": "Disfruta de una deliciosa tarta de chocolates sin horno, fácil de preparar y perfecta para cualquier ocasión. Con una base de galletas tipo Oreo y una cremosa mezcla de queso y chocolate, esta tarta te conquistará desde el primer bocado.",
+      "periodo": "mañana",
+      "author": "@yasinfood_",
+      "fecha": "14 de julio de 2024",
+      "enlace": "/apartados/Tartachocolate.html"
+    },
+    "Rollo de Chocolate Crepes": {
+      "title-card": "Rollo de Chocolate Crepes",
+      "descripcion": "¡Esta receta de rollo de chocolate es increíblemente fácil de hacer y el resultado es espectacular! Perfecto para impresionar a tus invitados o para darte un gusto. Sigue los sencillos pasos y disfruta de este delicioso postre.",
+      "periodo": "mañana",
+      "author": "@chefbosquet",
+      "fecha": "14 de julio de 2024",
+      "enlace": "/apartados/Rolloscreepes.html"
+    },
+    "Tostadas Francesas con Queso y Jamón": {
+      "title-card": "Tostadas Francesas con Queso y Jamón",
+      "descripcion": "¡No prepares el desayuno sin antes ver esta receta! Descubre cómo hacer unas tostadas francesas rellenas de queso y jamón que serán la delicia de todos en casa. Una receta fácil y rápida que tus hijos amarán llevar al colegio. ¡Prepárate para disfrutar de un desayuno irresistible!",
+      "periodo": "mañana",
+      "recomendacion": [
+        "Deja que las tostadas francesas empapen en la mezcla de huevo durante unos 30 segundos a 1 minuto por cada lado para asegurarte de que estén bien impregnadas pero no empapadas en exceso.",
+        "Cocina las tostadas en una sartén a fuego medio-bajo con un poco de mantequilla o aceite, volteándolas una vez, hasta que estén doradas y el queso se derrita por completo."], 
+      "author": "Recetas de Jefe",
+      "fecha": "15 de julio de 2024",
+      "enlace": "/apartados/tostadasjamon.html"
+    }
+}
