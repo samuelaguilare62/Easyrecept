@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('favorites', JSON.stringify(favorites));
 
     // Redirigir a la página de Favoritos.html
-    window.location.href = '/apartados/Favoritos.html';
+window.location.href = '/apartados/Favoritos.html';
   }
 
   // Asignar evento de clic al botón de favorito en cada tarjeta
