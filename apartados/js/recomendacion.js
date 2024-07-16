@@ -1,4 +1,4 @@
-(function() {
+document.addEventListener("DOMContentLoaded", function() {
   // Menú lateral
   const menuToggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
@@ -90,25 +90,25 @@
     })
     .catch(error => console.error('Error al cargar las recetas:', error));
     
-  const shareButton = document.querySelector(".ShareWeb");
+    const shareButton = document.querySelector(".ShareWeb");
 
-  if (shareButton) {
-    shareButton.addEventListener("click", function(event) {
-      event.preventDefault();
+    if (shareButton) {
+      shareButton.addEventListener("click", function(event) {
+        event.preventDefault();
 
-      if (navigator.share) {
-        let shareData = {
-          title: document.title,
-          text: "¡Descubre esta increíble página!",
-          url: window.location.href
-        };
+        if (navigator.share) {
+          let shareData = {
+            title: document.title,
+            text: "¡Descubre esta increíble página!",
+            url: window.location.href
+          };
 
-        navigator.share(shareData)
-          .then(() => console.log("Contenido compartido exitosamente."))
-          .catch(error => console.error("Error al compartir:", error));
-      } else {
-        console.log("La API de compartir no está disponible en este navegador.");
-      }
-    });
-  }
-})();
+          navigator.share(shareData)
+            .then(() => console.log("Contenido compartido exitosamente."))
+            .catch(error => console.error("Error al compartir:", error));
+        } else {
+          console.log("La API de compartir no está disponible en este navegador.");
+        }
+      });
+    }
+});

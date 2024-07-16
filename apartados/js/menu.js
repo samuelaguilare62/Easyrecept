@@ -3,20 +3,22 @@
   const menuToggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
 
-  menuToggle.addEventListener('click', function(event) {
-    menu.classList.toggle('open');
-    event.stopPropagation(); // Detener la propagación para evitar cerrar el menú inmediatamente
-  });
+  if (menuToggle) {
+    menuToggle.addEventListener('click', function(event) {
+      menu.classList.toggle('open');
+      event.stopPropagation(); // Detener la propagación para evitar cerrar el menú inmediatamente
+    });
 
-  document.addEventListener('click', function(event) {
-    if (!menu.contains(event.target) && event.target !== menuToggle && menu.classList.contains('open')) {
-      menu.classList.remove('open');
-    }
-  });
+    document.addEventListener('click', function(event) {
+      if (!menu.contains(event.target) && event.target !== menuToggle && menu.classList.contains('open')) {
+        menu.classList.remove('open');
+      }
+    });
+  }
 
   // Tarjetas de recetas
   const recipeCards = document.querySelectorAll('.recipe-card');
-  
+
   // Función para mostrar una tarjeta según su nombre
   function showRecipeCard(cardName) {
     recipeCards.forEach(card => {
@@ -28,31 +30,31 @@
       }
     });
   }
-  
+
   // Función para manejar el clic en el botón de compartir
   document.querySelectorAll('.share-btn').forEach(button => {
     button.addEventListener('click', function(event) {
       event.preventDefault(); // Evitar la acción predeterminada del enlace
       event.stopPropagation(); // Detener la propagación para evitar que se interprete como un clic en la tarjeta
-  
+
       const recipeName = this.closest('.recipe-card').querySelector('h2').textContent.trim();
       const cardName = normalizeRecipeName(recipeName);
-  
+
       // Mostrar la tarjeta correspondiente
       showRecipeCard(cardName);
-  
-      // Actualizar la URL del navegador para reflejar la tarjeta compartida, usando # en lugar de @
+
+      // Actualizar la URL del navegador para reflejar la tarjeta compartida
       const newUrl = `#${cardName}`;
       history.pushState(null, null, newUrl);
-  
+
       // Almacenar en localStorage para persistencia
       localStorage.setItem('selectedRecipe', cardName);
-  
+
       // Simular la acción de compartir (puedes personalizar esto según tus necesidades)
       alert(`Compartiendo: ${window.location.href}`);
     });
   });
-  
+
   // Función para manejar la carga inicial y los cambios en el hash
   function handleHashChange() {
     const hash = window.location.hash.slice(1); // Eliminar el # del inicio
@@ -63,10 +65,10 @@
       recipeCards.forEach(card => card.style.display = 'block');
     }
   }
-  
+
   // Manejar la carga inicial de la página
   window.addEventListener('load', handleHashChange);
-  
+
   // Manejar cambios en el hash (por si el usuario navega con los botones del navegador)
   window.addEventListener('hashchange', handleHashChange);
 
@@ -139,7 +141,8 @@
       event.stopPropagation(); // Detener la propagación para evitar que afecte a otros elementos
     });
   });
-  
+
+  // Compartir página web
   const shareButton = document.querySelector(".ShareWeb");
 
   if (shareButton) {
@@ -161,4 +164,5 @@
       }
     });
   }
+
 })();
