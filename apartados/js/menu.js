@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
   // Menú lateral
   const menuToggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
@@ -14,42 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  /* Tarjetas de recetas
-  const recipeCards = document.querySelectorAll('.recipe-card');
-
-  // Función para mostrar una tarjeta según su nombre
-  function showRecipeCard(cardName) {
-    recipeCards.forEach(card => {
-      const recipeTitle = card.querySelector('h2').textContent.trim();
-      if (normalizeRecipeName(recipeTitle) === cardName) {
-        card.style.display = 'block'; // Mostrar la tarjeta
-      } else {
-        card.style.display = 'none'; // Ocultar otras tarjetas
-      }
-    });
-  }
-
-  // Función para manejar el clic en el botón de compartir
-  document.querySelectorAll('.share-btn').forEach(button => {
-    button.addEventListener('click', function(event) {
-      event.preventDefault(); // Evitar la acción predeterminada del enlace
-      event.stopPropagation(); // Detener la propagación para evitar que se interprete como un clic en la tarjeta
-      const recipeName = this.closest('.recipe-card').querySelector('h2').textContent.trim();
-      const cardName = normalizeRecipeName(recipeName);
-
-      // Mostrar la tarjeta correspondiente
-      showRecipeCard(cardName);
-
-      // Actualizar la URL del navegador para reflejar la tarjeta compartida
-      history.pushState(null, null, `@${cardName}`);
-
-      // Almacenar en localStorage para persistencia
-      localStorage.setItem('selectedRecipe', cardName);
-
-      // Simular la acción de compartir (puedes personalizar esto según tus necesidades)
-      alert(`Compartiendo: @${cardName}`);
-    });
-  });*/
   // Tarjetas de recetas
   const recipeCards = document.querySelectorAll('.recipe-card');
   
@@ -132,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('favorites', JSON.stringify(favorites));
 
     // Redirigir a la página de Favoritos.html
-window.location.href = '/apartados/Favoritos.html';
+    window.location.href = '/apartados/Favoritos.html';
   }
 
   // Asignar evento de clic al botón de favorito en cada tarjeta
@@ -178,24 +142,23 @@ window.location.href = '/apartados/Favoritos.html';
   
   const shareButton = document.querySelector(".ShareWeb");
 
-if (shareButton) {
-  shareButton.addEventListener("click", function(event) {
-    event.preventDefault();
+  if (shareButton) {
+    shareButton.addEventListener("click", function(event) {
+      event.preventDefault();
 
-    if (navigator.share) {
-      let shareData = {
-        title: document.title,
-        text: "¡Descubre esta increíble página!",
-        url: window.location.href
-      };
+      if (navigator.share) {
+        let shareData = {
+          title: document.title,
+          text: "¡Descubre esta increíble página!",
+          url: window.location.href
+        };
 
-      navigator.share(shareData)
-        .then(() => console.log("Contenido compartido exitosamente."))
-        .catch(error => console.error("Error al compartir:", error));
-    } else {
-      console.log("La API de compartir no está disponible en este navegador.");
-    }
-  });
-}
-
-});
+        navigator.share(shareData)
+          .then(() => console.log("Contenido compartido exitosamente."))
+          .catch(error => console.error("Error al compartir:", error));
+      } else {
+        console.log("La API de compartir no está disponible en este navegador.");
+      }
+    });
+  }
+})();

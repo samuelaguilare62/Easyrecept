@@ -1,75 +1,4 @@
-/*document.addEventListener("DOMContentLoaded", function() {
-  
-    // Menú lateral
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-
-  menuToggle.addEventListener('click', function(event) {
-    menu.classList.toggle('open');
-    event.stopPropagation(); // Detener la propagación para evitar cerrar el menú inmediatamente
-  });
-
-  document.addEventListener('click', function(event) {
-    if (!menu.contains(event.target) && event.target !== menuToggle && menu.classList.contains('open')) {
-      menu.classList.remove('open');
-    }
-  });
-
-  
-  const recomendacionesDiv = document.getElementById('recomendaciones');
-
-  fetch('/info.json')
-    .then(response => response.json())
-    .then(data => {
-      const recetas = Object.values(data);
-      const hora = new Date().getHours();
-      let periodo;
-
-      if (hora >= 5 && hora < 12) {
-        periodo = 'mañana';
-      } else if (hora >= 12 && hora < 18) {
-        periodo = 'tarde';
-      } else if (hora >= 18 && hora < 24) {
-        periodo = 'noche';
-      } else {
-        periodo = 'madrugada';
-      }
-
-      const recetasFiltradas = recetas.filter(receta => receta.periodo === periodo);
-
-      recetasFiltradas.forEach(receta => {
-        const recetaDiv = document.createElement('div');
-        recetaDiv.classList.add('receta');
-        
-        let enlaceHTML = '';
-        if (receta.enlace) {
-          enlaceHTML = `<a href="${receta.enlace}">Ver Receta</a>`;
-        }
-
-        recetaDiv.innerHTML = `
-          <div>
-            <h2>${receta["title-card"]}</h2>
-            <p>${receta.descripcion}</p>
-            <p><strong>Autor:</strong> ${receta.author}</p>
-            <p><strong>Fecha:</strong> ${receta.fecha}</p>
-            ${enlaceHTML}
-          </div>
-        `;
-        recomendacionesDiv.appendChild(recetaDiv);
-
-        if (receta.recomendacion) {
-          const recomendacionDiv = document.createElement('div');
-          recomendacionDiv.classList.add('recomendacion');
-          recomendacionDiv.innerHTML = `<p><strong>Recomendación:</strong> ${receta.recomendacion}</p>`;
-          recomendacionesDiv.appendChild(recomendacionDiv);
-        }
-      });
-    })
-    .catch(error => console.error('Error al cargar las recetas:', error));
-    
-});*/
-document.addEventListener("DOMContentLoaded", function() {
-  
+(function() {
   // Menú lateral
   const menuToggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
@@ -161,26 +90,25 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .catch(error => console.error('Error al cargar las recetas:', error));
     
-    const shareButton = document.querySelector(".ShareWeb");
+  const shareButton = document.querySelector(".ShareWeb");
 
-if (shareButton) {
-  shareButton.addEventListener("click", function(event) {
-    event.preventDefault();
+  if (shareButton) {
+    shareButton.addEventListener("click", function(event) {
+      event.preventDefault();
 
-    if (navigator.share) {
-      let shareData = {
-        title: document.title,
-        text: "¡Descubre esta increíble página!",
-        url: window.location.href
-      };
+      if (navigator.share) {
+        let shareData = {
+          title: document.title,
+          text: "¡Descubre esta increíble página!",
+          url: window.location.href
+        };
 
-      navigator.share(shareData)
-        .then(() => console.log("Contenido compartido exitosamente."))
-        .catch(error => console.error("Error al compartir:", error));
-    } else {
-      console.log("La API de compartir no está disponible en este navegador.");
-    }
-  });
-}
-
-});
+        navigator.share(shareData)
+          .then(() => console.log("Contenido compartido exitosamente."))
+          .catch(error => console.error("Error al compartir:", error));
+      } else {
+        console.log("La API de compartir no está disponible en este navegador.");
+      }
+    });
+  }
+})();
