@@ -1,0 +1,178 @@
+body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      background-color: #E2998B;
+    }
+
+    .header {
+      background-color: hsla(10, 31%, 28%, 1);
+      color: #caa39b;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      width: 95%;
+      justify-content: center;
+    }
+
+    .header img {
+      height: 40px;
+      margin-left: 5px;
+      border-radius: 50%;
+    }
+
+    .header h1 {
+      margin: 0;
+      margin-left: 10px;
+    }
+
+    #menu-toggle {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #caa39b;
+      margin-left: auto;
+    }
+
+    #menu-toggle i {
+      font-size: 24px;
+      color: #caa39b;
+    }
+
+    .menu-lateral {
+      position: fixed;
+      right: -250px;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #5E3932;
+      color: #caa39b;
+      transition: right 0.3s ease;
+      z-index: 1000;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .menu-lateral ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-lateral li {
+      padding: 15px;
+      border-bottom: 1px solid #caa39b;
+    }
+
+    .menu-lateral .logo2 {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #caa39b;
+    }
+
+    .menu-lateral .logo2 img {
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .menu-lateral .logo2 b {
+      font-size: 18px;
+    }
+
+    .menu-lateral a {
+      color: #caa39b;
+      text-decoration: none;
+    }
+
+    .menu-lateral a:hover {
+      text-decoration: underline;
+    }
+
+    .menu-lateral.open {
+      right: 0;
+    }
+
+    .receta {
+      display: flex;
+      align-items: center;
+      background-color: rgb(239, 187, 177);
+      border-radius: 20px;
+      padding: 10px;
+      margin: 10px;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    .receta div {
+      padding: 10px;
+      flex-grow: 1;
+    }
+
+    .receta h2 {
+      margin: 0;
+      color: #5e3241;
+    }
+
+    .receta p {
+      margin: 5px 0;
+      color: #7D534C;
+    }
+
+    .receta a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: rgb(239, 209, 177);
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .receta a:hover {
+      background-color: rgb(239, 209, 177);
+      color: black;
+      border: 2px solid whitesmoke;
+    }
+
+    .recomendacion {
+      margin: 10px;
+      padding: 10px;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    /* Estilos para el botón de recomendaciones */
+    .show-recommendations {
+      background-color: rgb(239, 209, 177);
+      color: black;
+      /* Color del texto */
+      padding: 10px;
+      /* Espaciado interno */
+      border-radius: 10px;
+      font-size: 15px;
+      border: none;
+      /* Sin borde */
+      cursor: pointer;
+      /* Cursor al pasar sobre él */
+      margin-top: 10px;
+      /* Margen superior */
+    }
+
+    /* Estilos para el contenedor de recomendaciones */
+    .recommendations-container {
+      margin-top: 10px;
+      /* Margen superior */
+      padding: 10px;
+      /* Espaciado interno */
+      background-color: #F2B1B1;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      /* Borde */
+      display: none;
+      /* Por defecto oculto */
+    }
