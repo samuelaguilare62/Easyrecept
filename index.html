@@ -1,130 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre en Easy Recepes una variedad de recetas fáciles y deliciosas para todos los gustos. Encuentra desde helados de café hasta tartas sin horno, con nuevas recomendaciones diarias. ¡Explora y disfruta la cocina con nosotros!">
-    <title>Easy Recepes - Recetas fáciles y deliciosas para todos los gustos</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/logo/Easy_Recepes.ico" type="image/x-icon">
-    <meta name="robots" content="index, follow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easy Recepes</title>
+  <meta name="description" content="Descubre en Easy Recepes una variedad de recetas fáciles y deliciosas para todos los gustos. Encuentra desde helados de café hasta tartas sin horno, con nuevas recomendaciones diarias. ¡Explora y disfruta la cocina con nosotros!">
+
+  <link rel="stylesheet" href="/apartados/css/bienvenida.css">
 </head>
+
 <body>
-    <header class="header">
-        <img src="/logo/Easy_Recepes.ico" alt="Easy Recepes">
-        <h1>Easy Recepes</h1>
-        <button id="menu-toggle"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
-    </header>
-    <div class="menu-lateral" id="menu">
-        <ul>
-            <li>
-                <div class="logo2">
-                    <img src="/logo/Easy_Recepes.ico" alt="Easy Recepes">
-                    <b>Easy Recepes</b>
-                </div>
-            </li>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="/apartados/recomendacion.html">Recomendación del Día</a></li>
-            <li><a href="/apartados/Favoritos.html">Favoritos</a></li>
-            <li><a href="#" class="ShareWeb">Compartir Web</a></li>
-        </ul>
+  <header>
+    <h1>Easy Recepes</h1>
+    <p>Descubre en Easy Recepes una variedad de recetas fáciles y deliciosas para todos los gustos. Encuentra desde helados de café hasta tartas sin horno, con nuevas recomendaciones diarias. ¡Explora y disfruta la cocina con nosotros!</p>
+    <a href="/catalogo.html" class="btn">Explora nuestro catalogo</a>
+  </header>
+
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlz6GzuURQB0BxNHwPTcXp0qQFg1krflyIoFO6B2O_uC63RoNfEBM3yPpz&s=10" alt="Helado de Café">
+        <p>Helado de Café</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSlSpt_9uyHcBsis6DPoTi8tnyhyU1SajxVQ&usqp=CAU" alt="Corn Dogs Coreanos">
+        <p>Corn Dogs Coreanos Caseros</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlbntVDLb1Eum9_01qLmCGPnnG4xm-UDPjXMruAuGJFli0ShstfVGoqmpD&s=10" alt="Tres leches de Oreo">
+        <p>Tres leches de Oreo</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRut1SpIMrfOr8eFh7aqJfNrvLoM-QAMamsVnGu1pbvUmPENSAKFMFDGkw&s=10" alt="Pastel de chocolate super cremoso">
+        <p>Pastel de chocolate super cremoso</p>
+      </div>
     </div>
+    <button class="carousel-button prev">&#10094;</button>
+    <button class="carousel-button next">&#10095;</button>
+  </div>
+  <section>
+    <h2>Sobre nosotros</h2>
+    <p>En Easy Recepes, nos dedicamos a ofrecer a nuestros usuarios una amplia variedad de recetas fáciles y simples de preparar. Nos enfocamos en utilizar ingredientes comunes que siempre están a su disposición, permitiendo que cualquiera pueda cocinar platos deliciosos sin complicaciones. Nuestro objetivo es simplificar el proceso culinario y hacer que la cocina sea accesible para todos, sin importar su nivel de experiencia.</p>
+  </section>
 
+  <section class="faq">
+    <h2>Preguntas frecuentes</h2>
+    <ul>
+      <li onclick="toggleAccordion(this)">¿Cómo encuentro recetas específicas?
+        <div class="faq-content">Por el momento solo puedes encontrar la receta buscandola en la pagina ya que estamos en semanas de prueba para ver el resivimiento de la gente.</div>
+      </li>
+      <li onclick="toggleAccordion(this)">¿Las recetas son adecuadas para principiantes?
+        <div class="faq-content">Sí, todas nuestras recetas están diseñadas para ser fáciles de seguir, incluso para quienes no tienen mucha experiencia en la cocina.</div>
+      </li>
+      <li onclick="toggleAccordion(this)">¿Puedo guardar mis recetas favoritas?
+        <div class="faq-content">Sí, puedes guardar tus recetas favoritas y acceder a ellas fácilmente.</div>
+      </li>
+    </ul>
+  </section>
+  <footer>
+    <p>© 2024 Easy Recepes. Todos los derechos reservados.</p>
+  </footer>
 
-    <div class="recipe-cards">
-        <a href="/apartados/HeladoCafe.html" class="recipe-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlz6GzuURQB0BxNHwPTcXp0qQFg1krflyIoFO6B2O_uC63RoNfEBM3yPpz&s=10" alt="Helado de Café">
-            <div class="recipe-info">
-                <h2>Helado de Café</h2>
-                <p>Sacado de: @opinionvegana</p>
-                <p>Fecha: 13 de julio de 2024</p>
-                <div class="recipe-actions">
-                    <button class="share-btn"><i class="fa-solid fa-share"></i></button>
-                    <button class="favorite-btn"><i class="fa-solid fa-bookmark"></i></button>
-                </div>
-            </div>
-        </a>
-
-        <a href="/apartados/cornDog.html" class="recipe-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSlSpt_9uyHcBsis6DPoTi8tnyhyU1SajxVQ&usqp=CAU" alt="Corn Dogs Coreanos">
-            <div class="recipe-info">
-                <h2>Corn Dogs Coreanos Caseros</h2>
-                <p>Sacado de: @lasrecetasdesimon</p>
-                <p>Fecha: 13 de julio de 2024</p>
-                <div class="recipe-actions">
-                    <button class="share-btn"><i class="fa-solid fa-share"></i></button>
-                    <button class="favorite-btn"><i class="fa-solid fa-bookmark"></i></button>
-                </div>
-            </div>
-        </a>
-
-        <a href="/apartados/pasteldeoreo.html" class="recipe-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlbntVDLb1Eum9_01qLmCGPnnG4xm-UDPjXMruAuGJFli0ShstfVGoqmpD&s=10" alt="Tres leches de Oreo">
-            <div class="recipe-info">
-                <h2>Tres leches de Oreo</h2>
-                <p>Sacado de: @sebastianleon</p>
-                <p>Fecha: 13 de julio de 2024</p>
-                <div class="recipe-actions">
-                    <button class="share-btn"><i class="fa-solid fa-share"></i></button>
-                    <button class="favorite-btn"><i class="fa-solid fa-bookmark"></i></button>
-                </div>
-            </div>
-        </a>
-
-        <a href="/apartados/pastelchocolate.html" class="recipe-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRut1SpIMrfOr8eFh7aqJfNrvLoM-QAMamsVnGu1pbvUmPENSAKFMFDGkw&s=10" alt="Pastel de chocolate super cremoso">
-            <div class="recipe-info">
-                <h2>Pastel de chocolate super cremoso y facilísimo</h2>
-                <p>Sacado de: @marianutrucionfit</p>
-                <p>Fecha: 14 de julio de 2024</p>
-                <div class="recipe-actions">
-                    <button class="share-btn"><i class="fa-solid fa-share"></i></button>
-                    <button class="favorite-btn"><i class="fa-solid fa-bookmark"></i></button>
-                </div>
-            </div>
-        </a>
-
-        <a href="/apartados/Tartachocolate.html" class="recipe-card">
-            <img src="https://i.ibb.co/1r26zvN/Picsart-24-07-14-19-30-26-651.jpg" alt="Tarta de Chocolates sin Horno">
-            <div class="recipe-info">
-                <h2>Tarta de Chocolates sin Horno</h2>
-                <p>Sacado de: @yasinfood_</p>
-                <p>Fecha: 14 de julio de 2024</p>
-                <div class="recipe-actions">
-                    <button class="share-btn"><i class="fa-solid fa-share"></i></button>
-                    <button class="favorite-btn"><i class="fa-solid fa-bookmark"></i></button>
-                </div>
-            </div>
-        </a>
-
-        <a href="/apartados/Rolloscreepes.html" class="recipe-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpi8ZJkjBTFZYavOisz2vt2nLoQNJYAT4oPASX1WGnsdLfTtw5NgmjuTH0&s=10" alt="Rollo de Chocolate Crepes">
-            <div class="recipe-info">
-                <h2>Rollo de Chocolate Crepes</h2>
-                <p>Sacado de: @chefboquet</p>
-                <p>Fecha: 14 de julio de 2024</p>
-                <div class="recipe-actions">
-                    <button class="share-btn"><i class="fa-solid fa-share"></i></button>
-                    <button class="favorite-btn"><i class="fa-solid fa-bookmark"></i></button>
-                </div>
-            </div>
-        </a>
-
-        <a href="/apartados/tostadasjamon.html" class="recipe-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5dnEAYK3R1XchwzIEodFvm3fX4IZ4WZnZRA&s" alt="Tostadas Francesas con Queso y Jamón">
-            <div class="recipe-info">
-                <h2>Tostadas Francesas con Queso y Jamón</h2>
-                <p>Sacado de: Recetas de Jefe</p>
-                <p>Fecha: 15 de julio de 2024</p>
-                <div class="recipe-actions">
-                    <button class="share-btn"><i class="fa-solid fa-share"></i></button>
-                    <button class="favorite-btn"><i class="fa-solid fa-bookmark"></i></button>
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <script src="/apartados/js/menu.js"></script>
-    <script src="https://kit.fontawesome.com/7bf7f5d5a4.js" crossorigin="anonymous"></script>
+  <script src="/main.js"></script>
 </body>
+
 </html>
