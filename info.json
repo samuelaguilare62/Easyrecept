@@ -6,7 +6,7 @@
     "recomendacion": ["comerse el postre en dias de calor"],
     "author": "@opinionvegana",
     "fecha": "13 de julio de 2024",
-    "enlace": "/apartados/HeladoCafe.html"
+    "enlace": "apartados/HeladoCafe.html"
   },
   "Corn Dogs Coreanos Caseros": {
     "title-card": "Corn Dogs Coreanos Caseros",
@@ -16,7 +16,7 @@
       "hacerlos antes de comer."],
     "author": "@lasrecetasdesimon",
     "fecha": "14 de julio de 2024",
-    "enlace": "/apartados/cornDog.html"
+    "enlace": "apartados/cornDog.html"
   },
   "Tres leches de Oreo": {
     "title-card": "Tres leches de Oreo",
@@ -26,7 +26,7 @@
       "hacerlo para desayunar o antes de dormir "],
     "author": "@sebastianleon",
     "fecha": "14 de julio de 2024",
-    "enlace": "/apartados/pasteldeoreo.html"
+    "enlace": "apartados/pasteldeoreo.html"
   },
   "Pastel de chocolate super cremoso y facilísimo": {
     "title-card": "Pastel de chocolate super cremoso y facilísimo",
@@ -34,7 +34,7 @@
     "periodo": "mañana",
     "author": "@marianutricionfit",
     "fecha": "14 de julio de 2024",
-    "enlace": "/apartados/pastelchocolate.html"
+    "enlace": "apartados/pastelchocolate.html"
   },
     "Tarta de Chocolates sin Horno": {
       "title-card": "Tarta de Chocolates sin Horno",
@@ -42,7 +42,7 @@
       "periodo": "mañana",
       "author": "@yasinfood_",
       "fecha": "14 de julio de 2024",
-      "enlace": "/apartados/Tartachocolate.html"
+      "enlace": "apartados/Tartachocolate.html"
     },
     "Rollo de Chocolate Crepes": {
       "title-card": "Rollo de Chocolate Crepes",
@@ -50,7 +50,7 @@
       "periodo": "mañana",
       "author": "@chefbosquet",
       "fecha": "14 de julio de 2024",
-      "enlace": "/apartados/Rolloscreepes.html"
+      "enlace": "apartados/Rolloscreepes.html"
     },
     "Tostadas Francesas con Queso y Jamón": {
       "title-card": "Tostadas Francesas con Queso y Jamón",
@@ -61,6 +61,6 @@
         "Cocina las tostadas en una sartén a fuego medio-bajo con un poco de mantequilla o aceite, volteándolas una vez, hasta que estén doradas y el queso se derrita por completo."], 
       "author": "Recetas de Jefe",
       "fecha": "15 de julio de 2024",
-      "enlace": "/apartados/tostadasjamon.html"
+      "enlace": "apartados/tostadasjamon.html"
     }
 }
